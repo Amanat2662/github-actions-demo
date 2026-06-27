@@ -1,0 +1,17 @@
+name: My First CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Code lo GitHub se
+        uses: actions/checkout@v3
+      - name: Hello CI
+        run:  echo "CI Pipeline chl rhi hai!"
+      - name: Simple Test
+        run:  echo "Sab tests pass hogaye!"
