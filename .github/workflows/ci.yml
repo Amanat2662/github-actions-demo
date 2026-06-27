@@ -11,7 +11,11 @@ jobs:
     steps:
       - name: Code lo GitHub se
         uses: actions/checkout@v3
-      - name: Hello CI
-        run:  echo "CI Pipeline chl rhi hai!"
-      - name: Simple Test
-        run:  echo "Sab tests pass hogaye!"
+      - name: Python setup kro
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Pytest install kro
+        run:  pip install pytest
+      - name: Tests chlao
+        run:  pytest test_calculator.py
